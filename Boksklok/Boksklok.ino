@@ -3,6 +3,7 @@
      WIRING
 =================
 KEYPAD
+
 PIN KEYPAD  -  PIN ARDUINO
 1           -  D7
 2           -  D5
@@ -14,12 +15,18 @@ PIN KEYPAD  -  PIN ARDUINO
 RED         -  VCC (5 volt)
 =================
 SEVEN SEGMENT LED DISPLAY
+
 VCC         - VCC (5 volt - Red wire)
 GND         - GND (Brown wire)
-SS
-SDI
-SCK
+RX			- D1  (TX - Serial)
 =================
+OTHERS 
+
+Buzzer B	- D09
+Buzzer A	- D10
+Red Led		- D11
+Green Led	- D12
+Yellow Led	- D13
 */
 
 
