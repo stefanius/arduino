@@ -4,7 +4,14 @@
 SerialSevenSegment::SerialSevenSegment(HardwareSerial &s)
 {
 	_ser = &s;
+	clearDisplay();
 	toggleColonOff();
+	
+}
+
+SerialSevenSegment::SerialSevenSegment()
+{
+
 }
 
 // Send the clear display command (0x76)

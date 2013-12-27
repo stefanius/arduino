@@ -8,11 +8,11 @@ class SerialSevenSegment
 {
   public:
     SerialSevenSegment(HardwareSerial &s);
+	SerialSevenSegment();
     void clearDisplay();
 	void clearDecimals();
 	
     void setDecimals(byte decimals);
-	
 	void setBrightness(byte value);
 	
 	void toggleAposOn();

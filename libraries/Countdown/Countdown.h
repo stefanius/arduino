@@ -8,8 +8,11 @@ class Countdown
 {
   public:
     Countdown(int mins, int secs);
+	Countdown();
+	void set(int mins, int secs);
     void increase();
     void decrease();
+	bool decreaseToZero();
 	int getMinutes();
 	int getSeconds();
   private:
