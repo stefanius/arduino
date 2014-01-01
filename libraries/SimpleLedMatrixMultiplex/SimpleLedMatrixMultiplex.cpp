@@ -9,6 +9,7 @@
 
 SimpleLedMatrixMultiplex::SimpleLedMatrixMultiplex()
 {
+   _multiplex_delay = 5;
   _no_rows = 3;
   _no_cols = 3;
   grid = new int*[_no_rows]; // dynamic array (size 10) of pointers to int
@@ -26,7 +27,7 @@ void SimpleLedMatrixMultiplex::draw(int **pattern)
 	  if(rowPattern[thiscol] == HIGH){
 		 digitalWrite(_rows[thisrow], HIGH);
 		 digitalWrite(_cols[thiscol], LOW);
-		 delay(5);
+		 delay(_multiplex_delay);
 	  }
 
 	  digitalWrite(_cols[thiscol], HIGH);
@@ -35,6 +36,11 @@ void SimpleLedMatrixMultiplex::draw(int **pattern)
 	digitalWrite(_rows[thisrow], LOW);
 	
   }
+}
+
+void SimpleLedMatrixMultiplex::set_multiplex_delay(int delay)
+{
+	_multiplex_delay = delay;
 }
 
 int** SimpleLedMatrixMultiplex::retrieve_grid()
